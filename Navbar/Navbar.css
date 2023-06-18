@@ -1,0 +1,64 @@
+/* Mobile menu styles */
+#menu-toggle:checked~#mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#mobile-menu {
+    display: none;
+    margin-top: 1rem;
+}
+
+#mobile-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: white;
+}
+
+#mobile-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#mobile-menu button {
+    display: block;
+    padding: 0.5rem 1rem;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+#mobile-menu button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Hamburger icon styles */
+.hamburger-icon {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#menu-toggle:checked+.hamburger-icon .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle:checked+.hamburger-icon .line:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked+.hamburger-icon .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
