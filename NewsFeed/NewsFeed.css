@@ -1,0 +1,59 @@
+.carousel-outer {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.carousel-inner {
+    display: flex;
+    animation: carousel-animation 15s linear infinite;
+
+}
+
+.carousel-inner:hover {
+    animation-play-state: paused;
+}
+
+.carousel-item {
+    flex: 0 0 33.33%;
+    padding: 1rem;
+    transition: opacity 0.5s ease;
+}
+
+@keyframes carousel-animation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-66.66%);
+    }
+
+}
+
+.blur-image {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
+.carousel-item:hover .p-hover {
+    opacity: 1;
+}
+
+.typewriter {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    animation: typewriter 4s steps(40) 1s 1 normal both;
+    white-space: nowrap;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
